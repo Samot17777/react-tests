@@ -10,7 +10,8 @@ describe('Route redux component', () => {
         const props = {
             example: {
                 exampleNumber: 1
-            }
+            },
+            function: jest.fn()
         };
 
         const wrapper = render(<RouteReduxComponent {...props}/>);
@@ -22,10 +23,12 @@ describe('Route redux component', () => {
         const props = {
             example: {
                 exampleNumber: 1
-            }
+            },
+            function: jest.fn()
         };
 
         const wrapper = shallow(<RouteReduxComponent {...props}/>);
+        expect(props.function).toHaveBeenCalled();
 
         expect(wrapper.text()).toBe("1");
         wrapper.setProps({
@@ -35,6 +38,7 @@ describe('Route redux component', () => {
         });
 
         expect(wrapper.text()).toBe("2");
+        expect(props.function.mock.calls.length).toBe(2);
     });
 });
 
@@ -47,9 +51,13 @@ describe('Route redux container', () => {
             }
         });
 
+        const props = {
+            function: jest.fn()
+        };
+
         const wrapper = render(
             <Provider store={store}>
-                <RouteReduxContainer/>
+                <RouteReduxContainer {...props}/>
             </Provider>
         );
 
@@ -63,6 +71,11 @@ describe('Route redux container', () => {
             }
         });
 
+
+        const props = {
+            function: jest.fn()
+        };
+
         // const wrapper = shallow(
         //     <Provider store={store}>
         //         <RouteReduxContainer/>
@@ -71,10 +84,11 @@ describe('Route redux container', () => {
 
         const wrapper = mount(
             <Provider store={store}>
-                <RouteReduxContainer/>
+                <RouteReduxContainer {...props}/>
             </Provider>
         );
 
         expect(wrapper.text()).toBe("1");
+        expect(props.function).toHaveBeenCalled();
     });
 });

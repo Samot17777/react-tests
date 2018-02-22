@@ -8,4 +8,4 @@ export const exampleAction = number => ({
 export const exampleActionUsingThunk = number => (dispatch, getState) => dispatch({
     type: types.EXAMPLE_ACTION,
     payload: getState().example.exampleNumber += number
-})
+});
