@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Route redux component renders correctly 1`] = `
+<div>
+  1
+</div>
+`;
+
+exports[`Route redux container renders correctly 1`] = `
+<div>
+  1
+</div>
+`;

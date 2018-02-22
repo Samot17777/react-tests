@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Example reducer sets number 1`] = `
+Object {
+  "exampleNumber": 5,
+}
+`;

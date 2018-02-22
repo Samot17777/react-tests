@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Example actions creates example action 1`] = `
+Object {
+  "payload": 5,
+  "type": "example/EXAMPLE_ACTION",
+}
+`;
+
+exports[`Example actions creates example action with thunk 1`] = `
+Object {
+  "payload": 10,
+  "type": "example/EXAMPLE_ACTION",
+}
+`;

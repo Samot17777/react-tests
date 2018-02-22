@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Route param component renders correctly 1`] = `
+Array [
+  <span>
+    My route param is : aa 
+  </span>,
+  <span>
+    My route param with router is : foo 
+  </span>,
+]
+`;
